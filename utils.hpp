@@ -6,9 +6,9 @@
 
 void printDeviceInfo(PaDeviceInfo &d)
 {
-	std::cout << "-------------------------" << std::endl;
+	std::cout << "---------------------------------------" << std::endl;
 	std::cout << d.name << std::endl;
-	std::cout << "-------------------------" << std::endl;
+	std::cout << "---------------------------------------" << std::endl;
 
 	std::cout << "Device Name: " << d.name << std::endl;
 	std::cout << "Max Input Channels: " << d.maxInputChannels << std::endl;	

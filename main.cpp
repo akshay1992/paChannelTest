@@ -53,10 +53,6 @@ int main (void)
 	// INIT PA AND CHOOSE DEVICE
 	// --------------------------
 
-	Sine<> p;
-	for (int i=0; i<010000; i++)
-		cout << p() << endl;;
-
 	PaError err;
 	err = Pa_Initialize();
 	if (err != paNoError) PaErrorHandler();	
@@ -125,23 +121,23 @@ int main (void)
 	{
 		fflush(stdin);
 		c = cin.get();
-		if( c=='1' )
+		if( c=='1' && 1<=nchannels)
 			atomic_store(&data.channel, 1);
-		else if(c=='2') 
+		else if(c=='2' && 2<=nchannels) 
 			atomic_store(&data.channel, 2);
-		else if(c=='3') 
+		else if(c=='3' && 3<=nchannels) 
 			atomic_store(&data.channel, 3);
-		else if(c=='4') 
+		else if(c=='4' && 4<=nchannels) 
 			atomic_store(&data.channel, 4);
-		else if(c=='5') 
+		else if(c=='5' && 5<=nchannels) 
 			atomic_store(&data.channel, 5);
-		else if(c=='6') 
+		else if(c=='6' && 6<=nchannels) 
 			atomic_store(&data.channel, 6);
-		else if(c=='7') 
+		else if(c=='7' && 7<=nchannels) 
 			atomic_store(&data.channel, 7);
-		else if(c=='8') 
+		else if(c=='8' && 8<=nchannels) 
 			atomic_store(&data.channel, 8);
-		else if(c=='9') 
+		else if(c=='9' && 9<=nchannels) 
 			atomic_store(&data.channel, 9);
 	}
 
@@ -156,3 +152,4 @@ int main (void)
 
 	return 0;
 }
+
